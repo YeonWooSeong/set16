@@ -8,8 +8,12 @@
 </head>
 <body>
 
-
+<input type="button" value="홈으로" onclick="home()">
 <script>
+    function home(){
+        location.href = '';
+    }
+
 $(function () {
    battle(new Gun());
     battle(new Cannon());
