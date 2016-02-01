@@ -13,13 +13,17 @@
     <input type="text" ng-model="yourName" placeholder="Enter a name here">
     <hr>
     <h1>Hello {{yourName}}!</h1>
-
+    <input type="button" value="button" onclick="iife()">
 </div>
 
 <script>
-    $(function(){
-        alert('제이쿼리 정상 작동되는 알러트. 웹스톰ver');
-    });
+
+  var iife = function(){
+      alert('location');
+      location.href = '/iife';
+  };
+
+
 </script>
 </body>
 </html>

@@ -8,6 +8,9 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var iife = require('./routes/iife');
+var calc = require('./routes/calc');
+
 var app = express();
 
 // view engine setup
@@ -24,10 +27,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 /*app.use('/', routes);*/
 
+app.use('/iife',iife);
+
+app.use('/calc',calc);
+
 app.use('/',function(reg,res){
   res.sendfile(__dirname+'/views/index.html');
 
 });
+
 
 app.use('/users', users);
 
