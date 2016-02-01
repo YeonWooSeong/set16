@@ -8,8 +8,17 @@
 </head>
 <body>
 
+<input type="button" value="무긔" onclick="weapon()">
+
+
 
 <script>
+
+    function weapon() {
+        location.href = '/weapon'
+    }
+
+
     $(function () {
         alert('최초값 100에서'+Calc.add(100)+'50을 빼고,'+Calc.sub(50)+'2를 곱하고'+Calc.mul(2)+'10으로 나눈다'+Calc.div(10)+'그럼 됨 ㅋ')
     });

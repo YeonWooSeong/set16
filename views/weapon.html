@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+$(function () {
+   battle(new Gun());
+    battle(new Cannon());
+    battle('새총');
+});
+    var Gun = function () {
+        this.fire = function () {
+            return '총쏘기';
+        };
+    };
+        var Cannon = function () {
+            this.fire = function () {
+                return '대포쏘기';
+            };
+        };
+            function battle(weapon){
+            if(weapon.constructor == Gun){
+                alert(weapon.fire());
+            }else if(weapon.constructor == Cannon){
+                alert(weapon.fire());
+            }else{
+                alert('발사할수없뜸')
+            }
+            }
+
+
+
+</script>
+</body>
+</html>
